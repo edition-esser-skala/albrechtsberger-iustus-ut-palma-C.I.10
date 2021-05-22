@@ -1,5 +1,5 @@
 # change the following variables according to the current project
-project = Albrechtsberger_Iustus_palma_florebit
+project = Albrechtsberger_Iustus_ut_palma
 notes = clno1 clno2 timp vl1 vl2 vla S A T B org
 scores = full_score ottoni vl1 vl2 vla coro b org
 
