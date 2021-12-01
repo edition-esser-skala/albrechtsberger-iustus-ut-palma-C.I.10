@@ -1,27 +1,25 @@
 \version "2.22.0"
 
 \include "../definitions.ly"
-
-#(set-global-staff-size 15.87)
+\include "score_settings/full-score.ly"
 
 \book {
   \bookpart {
-    \header {
-      title = "I U S T U S   U T   P A L M A   F L O R E B I T"
-    }
+    \section "Iustus ut palma florebit"
+    \addTocEntry
     \paper { indent = 3\cm }
     \score {
       <<
         \new StaffGroup <<
           \new Staff <<
-            \set Staff.instrumentName = \markup \center-column { "Clarino I, II" "in D" }
+            \set Staff.instrumentName = \transposedName "Clarino I, II" "D" ""
             \set Staff.soloText = \markup \remark \medium "clno 1"
             % \transpose c d
             \partCombine \ClarinoI \ClarinoII
           >>
         >>
         \new Staff {
-          \set Staff.instrumentName = \markup \center-column { "Timpani" "in D–A" }
+          \set Staff.instrumentName = \transposedTimp "D" "" "A" ""
           % \transpose c d
           \Timpani
         }
@@ -44,25 +42,19 @@
         >>
         \new ChoirStaff <<
           \new Staff {
-            \set Staff.instrumentName = \SopranoIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
+            \incipitSoprano
             \new Voice = "Soprano" { \dynamicUp \SopranoNotes }
           }
           \new Lyrics \lyricsto Soprano \SopranoLyrics
 
           \new Staff {
-            \set Staff.instrumentName = \AltoIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
+            \incipitAlto
             \new Voice = "Alto" { \dynamicUp \AltoNotes }
           }
           \new Lyrics \lyricsto Alto \AltoLyrics
 
           \new Staff {
-            \set Staff.instrumentName = \TenoreIncipit
-            \override Staff.InstrumentName.self-alignment-Y = ##f
-            \override Staff.InstrumentName.self-alignment-X = #RIGHT
+            \incipitTenore
             \new Voice = "Tenore" { \dynamicUp \TenoreNotes }
           }
           \new Lyrics \lyricsto Tenore \TenoreLyrics

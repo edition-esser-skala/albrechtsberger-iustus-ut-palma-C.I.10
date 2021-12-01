@@ -1,17 +1,16 @@
 composer: Albrechtsberger, Johann Georg
 title: Iustus ut palma florebit
+subtitle: Offertorium de Quovis Sancto
 id: SchAl C.I.10
 genre: offertorium
 scoring: S, A, T, B (coro), 2 clno (D), timp (D–A), 2 vl, vla, b, org
 sources:
-  1:
+  B1:
     siglum: A-Ed
     shelfmark: B 231
-    type: manuscript copy
-    date: unknown
     rism: 600038181
     url: http://dommusikarchiv.martinus.at/site/werkverzeichnis/gallery/821.html
-github: albrechtsberger-iustus-ut-palma-C.I.10
+    principal: true
 imslp: Iustus_ut_palma_florebit%2C_SchAl_C.I.10_(Albrechtsberger%2C_Johann_Georg)
-notes:
-
+parts:
+  ottoni: Clarino I, II in D\\Timpani in D–A
